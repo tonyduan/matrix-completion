@@ -23,9 +23,6 @@ Usage:
 
     print("RMSE:", calc_unobserved_rmse(U, V, A_hat, mask))
 
-
-    See the examples folder for further details.
-
 License:
 
     This library is available under the MIT license.

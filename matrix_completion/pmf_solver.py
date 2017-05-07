@@ -2,14 +2,15 @@ import numpy as np
 import logging
 
 
-def pmf_solve(A, mask, k, mu, epsilon=1e-3, max_iterations=int(1e2)):
+def pmf_solve(A, mask, k, mu, epsilon=1e-3, max_iterations=100):
   """
   Solve probabilistic matrix factorization using alternating least squares.
 
   Since loss function is non-convex, each attempt at ALS starts from a
   random initialization and returns a local optimum.
 
-  [ Hu, Koren, and Volinksy 2008]
+  [ Salakhutdinov and Mnih 2008 ]
+  [ Hu, Koren, and Volinksy 2009 ]
 
   Parameters:
   -----------
@@ -63,7 +64,7 @@ def pmf_solve(A, mask, k, mu, epsilon=1e-3, max_iterations=int(1e2)):
 
     mean_diff = np.linalg.norm(X - prev_X) / m / n
     if _ % 1 == 0:
-      logger.info("Iteration: %i; Mean diff: %.4f" % (_, mean_diff))
+      logger.info("Iteration: %i; Mean diff: %.4f" % (_ + 1, mean_diff))
     if mean_diff < epsilon:
       break
     prev_X = X

@@ -53,7 +53,7 @@ def svt_solve(A, mask, tau=None, delta=None, epsilon=1e-2, max_iterations=1000):
 
     rel_recon_error = np.linalg.norm(mask * (X - A)) / np.linalg.norm(mask * A)
     if _ % 1 == 0:
-      logger.info("Iteration: %i; Rel error: %.4f" % (_, rel_recon_error))
+      logger.info("Iteration: %i; Rel error: %.4f" % (_ + 1, rel_recon_error))
     if rel_recon_error < epsilon:
       break
 

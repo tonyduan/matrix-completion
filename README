@@ -1,31 +1,30 @@
 
     Matrix completion library for Python
 
+Last update: May 2017.
 
-This client is a wrapper around Yahoo's API found here:
-https://developer.yahoo.com/boss/search/boss_api_guide/
+Methods:
+
+    1. Nuclear norm minimization (Candes and Recht 2009)
+    2. Singular value thresholding (Cai, Candes, and Shen 2010)
+    3. Alternating least squares (Hu, Koren, and Volinsky 2008)
+    4. Biased alternating least squares (Paterek 2007)
 
 Usage:
 
-    (use 'yboss.api)
-    (query-yboss "your query here" :limitedweb oauth-key oauth-secret)
+    from matrix_completion import nuclear_norm_solve, calc_unobserved_rmse
 
-    This call will return a list of query results, formatted as hashmaps.
+    U = np.random.randn(20, 5)
+    V = np.random.randn(15, 5)
+    R = np.random.randn(20, 15) + np.dot(U, V.T)
 
-    At the moment, the following query types are supported:
-    #{:limitedweb :web :images :news :spelling}
+    mask = np.round(np.random.rand(20, 15))
+    A_hat = nuclear_norm_solve(A, mask, mu=1.0)
+
+    print("RMSE:", calc_unobserved_rmse(U, V, A_hat, mask))
 
 
-Why:
-
-    There are plenty of Clojure APIs written around supporting Twitter,
-    Facebook, Alexa and the like but none for the Yahoo BOSS API. This is in
-    large due to the fact that very few libraries support the 'GET' call for
-    OAuthV1, which is what the Yahoo BOSS API requires.
-
-    This libary was built in response to thse issues. It is built upon the Java
-    Scribe OAuth library, at https://github.com/fernandezpablo85/scribe-java.
-
+    See the examples folder for further details.
 
 License:
 

@@ -4,7 +4,7 @@ from cvxpy import *
 def nuclear_norm_solve(A, mask, mu):
   """
   Solve using a nuclear norm approach, using CVXPY.
-  [ Candes and Recht, 2008 ]
+  [ Candes and Recht, 2009 ]
 
   Parameters:
   -----------

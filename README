@@ -12,6 +12,7 @@ Methods:
 
 Usage:
 
+    import numpy as np
     from matrix_completion import nuclear_norm_solve, calc_unobserved_rmse
 
     U = np.random.randn(20, 5)
@@ -19,9 +20,9 @@ Usage:
     R = np.random.randn(20, 15) + np.dot(U, V.T)
 
     mask = np.round(np.random.rand(20, 15))
-    A_hat = nuclear_norm_solve(A, mask, mu=1.0)
+    R_hat = nuclear_norm_solve(A, mask, mu=1.0)
 
-    print("RMSE:", calc_unobserved_rmse(U, V, A_hat, mask))
+    print("RMSE:", calc_unobserved_rmse(U, V, R_hat, mask))
 
 License:
 

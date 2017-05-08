@@ -56,7 +56,7 @@ def biased_mf_solve(A, mask, k, mu, epsilon=1e-3, max_iterations=100):
   for _ in range(max_iterations):
 
     # iteration for U
-    A_tilde = A - np.outer(beta, np.ones(n))
+    A_tilde = A - np.outer(np.ones(m), gamma)
     V_tilde = np.c_[np.ones(n), V]
 
     for i in range(m):
@@ -69,7 +69,7 @@ def biased_mf_solve(A, mask, k, mu, epsilon=1e-3, max_iterations=100):
       U[i] = U_tilde[1:]
 
     # iteration for V
-    A_tilde = A - np.outer(np.ones(m), gamma)
+    A_tilde = A - np.outer(beta, np.ones(n))
     U_tilde = np.c_[np.ones(m), U]
 
     for j in range(n):

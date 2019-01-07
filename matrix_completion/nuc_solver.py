@@ -1,7 +1,7 @@
 from cvxpy import *
 
 
-def nuclear_norm_solve(A, mask, mu):
+def nuclear_norm_solve(A, mask, mu=1.0):
   """
   Solve using a nuclear norm approach, using CVXPY.
   [ Candes and Recht, 2009 ]
@@ -22,9 +22,9 @@ def nuclear_norm_solve(A, mask, mu):
   X: m x n array
     completed matrix
   """
-  X = Variable(*A.shape)
+  X = Variable(shape=A.shape)
   objective = Minimize(mu * norm(X, "nuc") +
-                       sum_squares(mul_elemwise(mask, X-A)))
+                       sum_squares(multiply(mask, X-A)))
   problem = Problem(objective, [])
   problem.solve(solver=SCS)
   return X.value

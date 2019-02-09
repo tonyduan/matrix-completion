@@ -13,7 +13,7 @@ Last update: May 2017.
 
 #### Usage
 
-```
+```python
 import numpy as np
 from matrix_completion import svt_solve, calc_unobserved_rmse
 

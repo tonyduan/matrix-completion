@@ -1,10 +1,10 @@
-### Matrix completion library for Python
+### Matrix completion in Python
 
 Last update: February 2019.
 
 ---
 
-Python code for a few approaches at low-dimensional matrix completion. These methods operate in-memory and do not scale beyond size 500 x 500 or so.
+Python code for a few approaches at low-dimensional matrix completion. These methods operate in-memory and do not scale beyond size 1000 x 1000 or so. Nuclear norm minimization is particularly slow. If the number of factors is well-known in advance, alternating least squares and biased alternating least squares are recommended over singular value thresholding.
 
 #### Methods
 
@@ -33,4 +33,4 @@ See the `examples/` directory for more details.
 
 #### License
 
-This library is available under the Eclipse Public License.
+This code is available under the Eclipse Public License.

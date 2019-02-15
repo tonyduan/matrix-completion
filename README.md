@@ -4,7 +4,10 @@ Last update: February 2019.
 
 ---
 
-Python code for a few approaches at low-dimensional matrix completion. These methods operate in-memory and do not scale beyond size 1000 x 1000 or so. 
+Python code for a few approaches at low-dimensional matrix completion. 
+
+These methods operate in-memory and do not scale beyond size 1000 x 1000 or so. 
+
 #### Methods
 
 1. Nuclear norm minimization (Candes and Recht 2009)

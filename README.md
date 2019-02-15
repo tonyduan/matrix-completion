@@ -1,8 +1,10 @@
 ### Matrix completion library for Python
 
-Last update: May 2017.
+Last update: February 2019.
 
 ---
+
+Python code for a few approaches at low-dimensional matrix completion. These methods operate in-memory and do not scale beyond size 500 x 500 or so.
 
 #### Methods
 
@@ -26,6 +28,8 @@ R_hat = svt_solve(R, mask)
 
 print("RMSE:", calc_unobserved_rmse(U, V, R_hat, mask))
 ```
+
+See the `examples/` directory for more details.
 
 #### License
 

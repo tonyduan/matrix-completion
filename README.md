@@ -4,8 +4,7 @@ Last update: February 2019.
 
 ---
 
-Python code for a few approaches at low-dimensional matrix completion. These methods operate in-memory and do not scale beyond size 1000 x 1000 or so. Nuclear norm minimization is particularly slow. If the number of factors is well-known in advance, alternating least squares and biased alternating least squares are recommended over singular value thresholding.
-
+Python code for a few approaches at low-dimensional matrix completion. These methods operate in-memory and do not scale beyond size 1000 x 1000 or so. 
 #### Methods
 
 1. Nuclear norm minimization (Candes and Recht 2009)

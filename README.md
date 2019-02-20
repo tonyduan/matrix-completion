@@ -31,6 +31,8 @@ R_hat = svt_solve(R, mask)
 print("RMSE:", calc_unobserved_rmse(U, V, R_hat, mask))
 ```
 
+Note that here, the mask is a matrix with entries either 1 (indicating observed) or 0 (indicating missing).
+
 See the `examples/` directory for more details.
 
 #### References

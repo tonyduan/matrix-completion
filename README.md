@@ -8,6 +8,12 @@ Python code for a few approaches at low-dimensional matrix completion.
 
 These methods operate in-memory and do not scale beyond size 1000 x 1000 or so. 
 
+### Installation
+
+```shell
+pip3 install matrix_completion
+```
+
 #### Methods
 
 1. Nuclear norm minimization (very slow) [1]

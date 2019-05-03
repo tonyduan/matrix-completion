@@ -11,7 +11,7 @@ These methods operate in-memory and do not scale beyond size 1000 x 1000 or so.
 #### Installation
 
 ```shell
-pip3 install matrix_completion
+pip3 install matrix-completion
 ```
 
 #### Methods

@@ -64,7 +64,6 @@ def svt_solve(
     logger = logging.getLogger(__name__)
     if algorithm not in ['randomized', 'arpack']:
         raise ValueError("unknown algorithm %r" % algorithm)
-    ell = 5
     Y = np.zeros_like(A)
 
     if not tau:

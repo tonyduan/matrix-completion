@@ -25,7 +25,7 @@ def svt_solve(
         epsilon=1e-2,
         rel_improvement=-0.01,
         max_iterations=1000,
-        algorithm='randomized'):
+        algorithm='arpack'):
     """
     Solve using iterative singular value thresholding.
 
@@ -51,7 +51,7 @@ def svt_solve(
     max_iterations: int
         hard limit on maximum number of iterations
 
-    algorithm: str, 'arpack' or 'randomized' (default='randomized')
+    algorithm: str, 'arpack' or 'randomized' (default='arpack')
         SVD solver to use. Either 'arpack' for the ARPACK wrapper in 
         SciPy (scipy.sparse.linalg.svds), or 'randomized' for the 
         randomized algorithm due to Halko (2009).

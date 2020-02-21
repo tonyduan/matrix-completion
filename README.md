@@ -1,6 +1,6 @@
 ### Matrix completion in Python
 
-Last update: February 2019.
+Last update: February 2020.
 
 ---
 

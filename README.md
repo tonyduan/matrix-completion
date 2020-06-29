@@ -1,6 +1,6 @@
-### Matrix completion in Python
+### Lightweight Python library for in-memory matrix completion
 
-Last update: February 2020.
+Last update: June 2020, v0.0.2.
 
 ---
 
@@ -52,6 +52,19 @@ See the `examples/` directory for more details.
 [4] Ruslan Salakhutdinov and Andriy Mnih. 2007. Probabilistic Matrix Factorization. In Proceedings of the 20th International Conference on Neural Information Processing Systems (NIPS'07), J. C. Platt, D. Koller, Y. Singer, and S. T. Roweis (Eds.). Curran Associates Inc., USA, 1257-1264.
 
 [5] Paterek, Arkadiusz. “Improving regularized singular value decomposition for collaborative filtering.” (2007).
+
+#### Citation
+
+```
+@software{tonyduan_matrix_completion_github,
+	title = {Lightweight Python library for in-memory matrix completion.},
+	copyright = {EPL-1.0 License},
+	url = {https://github.com/tonyduan/matrix-completion},
+	author = {Duan, Tony},
+	year = {2020},
+	version = {0.0.2},
+}
+```
 
 #### License
 

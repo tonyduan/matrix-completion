@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="matrix-completion",
-    version="0.0.1",
+    version="0.0.2",
     author="Tony Duan",
     author_email="tonyduan@cs.stanford.edu",
     description="Python code for a few approaches at matrix completion.",
